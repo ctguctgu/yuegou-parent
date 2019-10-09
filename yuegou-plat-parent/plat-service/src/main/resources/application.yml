@@ -1,0 +1,11 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: YUEGOU-PLAT
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://root:821096@localhost:8761/eureka/
