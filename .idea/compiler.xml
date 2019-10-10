@@ -6,11 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="yuegou-config" />
         <module name="plat-interface" />
         <module name="plat-service" />
         <module name="yuegou-eureka" />
-        <module name="basic-util" />
         <module name="yuegou-zuul" />
+        <module name="basic-util" />
       </profile>
     </annotationProcessing>
   </component>

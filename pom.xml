@@ -13,6 +13,7 @@
         <module>yuegou-plat-parent</module>
         <module>yuegou-basic</module>
         <module>yuegou-zuul</module>
+        <module>yuegou-config</module>
     </modules>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
