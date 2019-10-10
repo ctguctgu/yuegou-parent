@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0b41bc-be2d-4541-9fb9-719231026be1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yuegou-config/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yuegou-config/src/main/java/cn/it/yuegou/ConfigServerApp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yuegou-config/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yuegou-plat-parent/plat-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yuegou-zuul/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-plat-parent/plat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-plat-parent/plat-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-plat-parent/plat-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-plat-parent/plat-service/src/main/resources/application_bak.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-zuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-zuul/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-zuul/src/main/resources/application_bak.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-config/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-config/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -150,10 +137,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.PlatApp" />
         <item itemvalue="Spring Boot.ZuulApp" />
-        <item itemvalue="Spring Boot.EurekaApp" />
+        <item itemvalue="Spring Boot.PlatApp" />
         <item itemvalue="Spring Boot.ConfigServerApp" />
+        <item itemvalue="Spring Boot.EurekaApp" />
       </list>
     </recent_temporary>
   </component>
@@ -165,12 +152,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@29c2074a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@887b6617" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@29c2074a" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b1911a7f" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@887b6617" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@16faaf67" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -191,7 +178,9 @@
       <workItem from="1570525028316" duration="6939000" />
       <workItem from="1570605056093" duration="235000" />
       <workItem from="1570606809846" duration="3403000" />
-      <workItem from="1570668412016" duration="4110000" />
+      <workItem from="1570668412016" duration="4777000" />
+      <workItem from="1570677156659" duration="20000" />
+      <workItem from="1570696922341" duration="645000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1570606901094</created>
@@ -200,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1570606901094</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="配置中心完成">
+      <created>1570676393275</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1570676393275</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +218,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="测试提交" />
-    <option name="LAST_COMMIT_MESSAGE" value="测试提交" />
+    <MESSAGE value="配置中心完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="配置中心完成" />
   </component>
 </project>
