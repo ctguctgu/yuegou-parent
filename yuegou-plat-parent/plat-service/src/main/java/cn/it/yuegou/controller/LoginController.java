@@ -20,8 +20,8 @@ public class LoginController {
     @PostMapping("/login")
     public AjaxResult login(@RequestBody User user){
         if ("ctgu".equals(user.getUsername()) && "123456".equals(user.getPassword())){
-            return AjaxResult.me().setMessage("登录成功").setResult("进来了哦");
+            return AjaxResult.me().setMessage("登录成功").setResult(user);
         }
-        return AjaxResult.me().setSuccess(false).setMessage("登录失败").setResult("别试了，进不来的");
+        return AjaxResult.me().setSuccess(false).setMessage("登录失败");
     }
 }
