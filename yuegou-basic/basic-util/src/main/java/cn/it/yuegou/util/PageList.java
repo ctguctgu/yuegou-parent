@@ -8,22 +8,22 @@ import java.util.List;
  * @author yinjunchi
  */
 public class PageList<T> {
-    private Integer total = 0;
+    private Long total = 0L;
     private List<T> rows = new ArrayList();
 
     public PageList() {
     }
 
-    public PageList(Integer total, List<T> rows) {
+    public PageList(Long total, List<T> rows) {
         this.total = total;
         this.rows = rows;
     }
 
-    public Integer getTotal() {
+    public Long getTotal() {
         return total;
     }
 
-    public void setTotal(Integer total) {
+    public void setTotal(Long total) {
         this.total = total;
     }
 

@@ -8,9 +8,12 @@
         <outputRelativeToContentRoot value="true" />
         <module name="yuegou-config" />
         <module name="plat-interface" />
+        <module name="product-service" />
         <module name="plat-service" />
+        <module name="basic-generator" />
         <module name="yuegou-eureka" />
         <module name="yuegou-zuul" />
+        <module name="product-interface" />
         <module name="basic-util" />
       </profile>
     </annotationProcessing>
