@@ -10,12 +10,17 @@
         <module name="plat-interface" />
         <module name="product-service" />
         <module name="plat-service" />
+        <module name="common-interface" />
         <module name="basic-generator" />
         <module name="yuegou-eureka" />
         <module name="yuegou-zuul" />
         <module name="product-interface" />
         <module name="basic-util" />
+        <module name="common-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="yuegou-conmon-parent" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -91,4 +91,18 @@ public class ProductTypeController {
     public List<ProductType> loadTree (){
         return productTypeService.loadTypeTree();
     }
+
+    /**
+     * 静态化首页
+     */
+    @PostMapping("/homepage")
+    public AjaxResult StaticPage(){
+        try {
+            productTypeService.homePage();
+            return AjaxResult.me().setMessage("成功！");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("失败！");
+        }
+    }
 }

@@ -5,7 +5,11 @@
     <file url="file://$PROJECT_DIR$/yuegou-basic" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yuegou-basic/basic-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yuegou-basic/basic-util" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yuegou-common-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yuegou-common-parent/common-interface" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yuegou-common-parent/common-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yuegou-config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/yuegou-conmon-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yuegou-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yuegou-plat-parent" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/yuegou-plat-parent/plat-interface" charset="UTF-8" />

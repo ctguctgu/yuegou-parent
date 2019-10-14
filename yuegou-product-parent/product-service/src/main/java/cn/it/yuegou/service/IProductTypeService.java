@@ -15,5 +15,14 @@ import java.util.List;
  */
 public interface IProductTypeService extends IService<ProductType> {
 
+    /**
+     * 读取商品类型树
+     * @return
+     */
     List<ProductType> loadTypeTree ();
+
+    /**
+     * 生成静态页面方法
+     */
+    void homePage();
 }
