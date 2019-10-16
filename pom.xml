@@ -15,7 +15,6 @@
         <module>yuegou-zuul</module>
         <module>yuegou-config</module>
         <module>yuegou-product-parent</module>
-        <module>yuegou-conmon-parent</module>
         <module>yuegou-common-parent</module>
     </modules>
     <properties>

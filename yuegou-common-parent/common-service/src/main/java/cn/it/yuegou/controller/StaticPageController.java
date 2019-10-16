@@ -16,7 +16,7 @@ public class StaticPageController {
      * @param model
      */
     @PostMapping("/page")
-    public void generatePage(@RequestParam(value = "templatePath")String templatePath,@RequestParam(value = "targetPath")String targetPath,@RequestBody Object model){
+    public void generatePage(@RequestParam("templatePath")String templatePath,@RequestParam("targetPath")String targetPath,@RequestBody Object model){
         VelocityUtils.staticByTemplate(model, templatePath,targetPath);
     }
 }
