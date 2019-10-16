@@ -12,6 +12,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mysql.cj.xdevapi.JsonArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -39,16 +40,24 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
     public List<ProductType> loadTypeTree() {
         String inRedis = redisClient.get("productTypes");
         System.out.println("查询redis");
-        if (inRedis==null){
-            List<ProductType> productTypes = getTreeDataLoop();
-            System.out.println("查询数据库");
-            String s = JSON.toJSONString(productTypes);
-            redisClient.set("productTypes", s);
-            return productTypes;
-        }else {
-            List<ProductType> productTypes = JSONArray.parseArray(inRedis, ProductType.class);
-            return productTypes;
+        List<ProductType> productTypes = null;
+        if (StringUtils.isEmpty(inRedis)){
+            synchronized (this){
+                inRedis = redisClient.get("productTypes");
+                if (StringUtils.isEmpty(inRedis)){
+                    productTypes = getTreeDataLoop();
+                    System.out.println("查询数据库");
+                    String s = JSON.toJSONString(productTypes);
+                    redisClient.set("productTypes", s);
+                    return productTypes;
+                }else {
+                    productTypes = JSONArray.parseArray(inRedis, ProductType.class);
+                }
+                return productTypes;
+            }
         }
+        productTypes = JSONArray.parseArray(inRedis, ProductType.class);
+        return productTypes;
     }
 
     @Override
