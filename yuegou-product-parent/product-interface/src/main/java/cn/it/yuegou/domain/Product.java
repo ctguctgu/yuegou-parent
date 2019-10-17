@@ -15,7 +15,7 @@ import lombok.experimental.Accessors;
  * </p>
  *
  * @author yinjunchi
- * @since 2019-10-12
+ * @since 2019-10-17
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -125,5 +125,16 @@ public class Product implements Serializable {
     @TableField("badCommentCount")
     private Integer badCommentCount;
 
+    @TableField("skuProperties")
+    private String skuProperties;
 
+    @TableField(exist = false)
+    private ProductType productType;
+    @TableField(exist = false)
+    private ProductExt ext;
+    @TableField(exist = false)
+    private Brand brand;
+
+    @TableField("medias")
+    private String medias;
 }

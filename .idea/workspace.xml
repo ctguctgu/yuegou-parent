@@ -4,15 +4,44 @@
     <option name="GROUP_BY_SEVERITY" value="true" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac0b41bc-be2d-4541-9fb9-719231026be1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/main/java/cn/it/yuegou/controller/FileController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/main/java/cn/it/yuegou/util/FastDfsApiOpr.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/main/resources/fdfs_client.conf" afterDir="false" />
+    <list default="true" id="ac0b41bc-be2d-4541-9fb9-719231026be1" name="Default Changelist" comment="fdfs文件上传">
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/ProductComment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/ProductExt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/Sku.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/Specification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/query/ProductCommentQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/query/ProductExtQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/query/SkuQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/query/SpecificationQuery.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductCommentController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductExtController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SkuController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SpecificationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductCommentMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductExtMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/SkuMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/SpecificationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductCommentService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductExtService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISkuService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISpecificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductCommentServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductExtServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SkuServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SpecificationServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/ProductCommentMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/ProductExtMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/SkuMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/SpecificationMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-common-parent/common-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/main/java/cn/it/yuegou/controller/StaticPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/main/java/cn/it/yuegou/controller/StaticPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/ProductApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/ProductApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-basic/basic-generator/src/main/java/cn/it/aigou/GenerateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-basic/basic-generator/src/main/java/cn/it/aigou/GenerateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/query/ProductQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/query/ProductQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/ProductMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +81,7 @@
         <item name="yuegou-product" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="yuegou-product: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="t_brand: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="t_product_ext: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -139,13 +168,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LetterUtil">
-    <configuration name="LetterUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.it.yuegou.util.LetterUtil" />
-      <module name="basic-util" />
+  <component name="RunManager" selected="Application.GenerateTest">
+    <configuration name="GenerateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="cn.it.aigou.GenerateTest" />
+      <module name="basic-generator" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.it.yuegou.util.*" />
+          <option name="PATTERN" value="cn.it.aigou.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -225,7 +254,7 @@
         <item itemvalue="Spring Boot.ZuulApp" />
         <item itemvalue="Spring Boot.ConfigServerApp" />
         <item itemvalue="Spring Boot.EurekaApp" />
-        <item itemvalue="Application.LetterUtil" />
+        <item itemvalue="Application.GenerateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -237,12 +266,21 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e28e4889" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6e98f846" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e28e4889" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@4bb42566" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@6e98f846" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@a5c30c54" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@94f5a9b1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@94f5a9b1" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@2c3c2a47" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -286,7 +324,10 @@
       <workItem from="1571123230955" duration="2596000" />
       <workItem from="1571127530516" duration="10659000" />
       <workItem from="1571187225000" duration="121000" />
-      <workItem from="1571187389806" duration="2829000" />
+      <workItem from="1571187389806" duration="2887000" />
+      <workItem from="1571197462715" duration="5600000" />
+      <workItem from="1571287648717" duration="1549000" />
+      <workItem from="1571295103684" duration="12911000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1570606901094</created>
@@ -330,7 +371,21 @@
       <option name="project" value="LOCAL" />
       <updated>1571054461646</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fdfs文件上传">
+      <created>1571192475820</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1571192475820</updated>
+    </task>
+    <task id="LOCAL-00008" summary="解决缓存击穿问题">
+      <created>1571215729967</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1571215729967</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,6 +411,8 @@
     <MESSAGE value="前后端联动" />
     <MESSAGE value="商品管理的维护" />
     <MESSAGE value="商品类型优化" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品类型优化" />
+    <MESSAGE value="fdfs文件上传" />
+    <MESSAGE value="解决缓存击穿问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决缓存击穿问题" />
   </component>
 </project>

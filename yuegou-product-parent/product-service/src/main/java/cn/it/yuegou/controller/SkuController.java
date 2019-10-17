@@ -1,34 +1,35 @@
 package cn.it.yuegou.controller;
 
-import cn.it.yuegou.service.IProductService;
-import cn.it.yuegou.domain.Product;
-import cn.it.yuegou.query.ProductQuery;
+import cn.it.yuegou.service.ISkuService;
+import cn.it.yuegou.domain.Sku;
+import cn.it.yuegou.query.SkuQuery;
 import cn.it.yuegou.util.AjaxResult;
 import cn.it.yuegou.util.PageList;
-import cn.it.yuegou.util.StrUtils;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @RestController
-@RequestMapping("/product")
-public class ProductController {
+@RequestMapping("/sku")
+public class SkuController {
     @Autowired
-    public IProductService productService;
+    public ISkuService skuService;
 
     /**
     * 保存和修改公用的
-    * @param product  传递的实体
+    * @param sku  传递的实体
     * @return Ajaxresult转换结果
     */
     @RequestMapping(value="/add",method= RequestMethod.POST)
-    public AjaxResult save(@RequestBody Product product){
+    public AjaxResult save(@RequestBody Sku sku){
         try {
-            if(product.getId()!=null){
-                productService.updateById(product);
+            if(sku.getId()!=null){
+                skuService.updateById(sku);
             }else{
-                productService.save(product);
+                skuService.save(sku);
             }
             return AjaxResult.me();
         } catch (Exception e) {
@@ -45,7 +46,7 @@ public class ProductController {
     @RequestMapping(value="/delete/{id}",method=RequestMethod.DELETE)
     public AjaxResult delete(@PathVariable("id") Integer id){
         try {
-            productService.removeById(id);
+            skuService.removeById(id);
             return AjaxResult.me();
         } catch (Exception e) {
         e.printStackTrace();
@@ -53,23 +54,11 @@ public class ProductController {
         }
     }
 
-    @RequestMapping(value="/batchdelete/{ids}",method=RequestMethod.DELETE)
-    public AjaxResult batchRemove(@PathVariable("ids") String ids){
-        try {
-            List<Long> longs = StrUtils.splitStr2LongArr(ids);
-            productService.removeByIds(longs);
-            return AjaxResult.me();
-        } catch (Exception e) {
-            e.printStackTrace();
-            return AjaxResult.me().setMessage("删除对象失败！"+e.getMessage());
-        }
-    }
-
     //获取
     @RequestMapping(value = "/{id}",method = RequestMethod.GET)
-    public Product get(@PathVariable("id") Long id)
+    public Sku get(@PathVariable("id") Long id)
     {
-        return productService.getById(id);
+        return skuService.getById(id);
     }
 
 
@@ -78,9 +67,9 @@ public class ProductController {
     * @return
     */
     @RequestMapping(value = "/list",method = RequestMethod.GET)
-    public List<Product> list(){
+    public List<Sku> list(){
 
-        return productService.list(null);
+        return skuService.list(null);
     }
 
 
@@ -91,8 +80,10 @@ public class ProductController {
     * @return PageList 分页对象
     */
     @RequestMapping(value = "/json",method = RequestMethod.POST)
-    public PageList<Product> json(@RequestBody ProductQuery query)
+    public PageList<Sku> json(@RequestBody SkuQuery query)
     {
-        return productService.queryPage(query);
+        Page<Sku> page = new Page<Sku>(query.getPageNum(),query.getPageSize());
+        IPage<Sku> ipage = skuService.page(page);
+        return new PageList<Sku>(ipage.getTotal(),ipage.getRecords());
     }
 }
