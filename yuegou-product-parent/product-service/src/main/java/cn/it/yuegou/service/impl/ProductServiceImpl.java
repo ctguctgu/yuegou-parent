@@ -2,9 +2,11 @@ package cn.it.yuegou.service.impl;
 
 import cn.it.yuegou.domain.Product;
 import cn.it.yuegou.domain.ProductExt;
+import cn.it.yuegou.domain.Sku;
 import cn.it.yuegou.domain.Specification;
 import cn.it.yuegou.mapper.ProductExtMapper;
 import cn.it.yuegou.mapper.ProductMapper;
+import cn.it.yuegou.mapper.SkuMapper;
 import cn.it.yuegou.mapper.SpecificationMapper;
 import cn.it.yuegou.query.ProductQuery;
 import cn.it.yuegou.service.IProductService;
@@ -20,6 +22,7 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * <p>
@@ -36,6 +39,8 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private ProductExtMapper productExtMapper;
     @Autowired
     private SpecificationMapper specificationMapper;
+    @Autowired
+    private SkuMapper skuMapper;
 
     @Override
     @Transactional
@@ -78,9 +83,9 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     }
 
     @Override
-    public void saveViewProperties(Long productId, List<Specification> specifications) {
+    public void saveViewProperties(Long productId, List<Specification> viewProperties) {
         Product product = baseMapper.selectById(productId);
-        product.setViewProperties(JSONArray.toJSONString(specifications));
+        product.setViewProperties(JSONArray.toJSONString(viewProperties));
         baseMapper.updateById(product);
     }
 
@@ -96,5 +101,36 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
             specifications =JSONArray.parseArray(skuProperties, Specification.class);
         }
         return specifications;
+    }
+
+    /**
+     * 保存sku属性
+     * @param productId
+     * @param skuProperties
+     * @param skus
+     */
+    @Override
+    public void saveSkuProperties(Long productId, List<Specification> skuProperties, List<Map<String, String>> skus) {
+        Product product = baseMapper.selectById(productId);
+        product.setSkuProperties(JSONArray.toJSONString(skuProperties));
+        baseMapper.updateById(product);
+        skuMapper.delete(new QueryWrapper<Sku>().eq("product_id",productId));
+        Sku sku = null;
+        for (Map<String, String> skuMap : skus) {
+            sku = new Sku();
+            sku.setCreateTime(System.currentTimeMillis());
+            sku.setProductId(productId);
+            StringBuilder sb = new StringBuilder();
+            for (Map.Entry<String, String> skuEntry : skuMap.entrySet()) {
+                if (!skuEntry.getKey().equals("price")&&!skuEntry.getKey().equals("store")&&!skuEntry.getKey().equals("indexs")){
+                    sb.append(skuEntry.getValue());
+                }
+            }
+            sku.setSkuName(sb.toString());
+            sku.setPrice(Integer.parseInt(skuMap.get("price")));
+            sku.setAvailableStock(Integer.parseInt(skuMap.get("store")));
+            sku.setIndexs(skuMap.get("indexs"));
+            skuMapper.insert(sku);
+        }
     }
 }

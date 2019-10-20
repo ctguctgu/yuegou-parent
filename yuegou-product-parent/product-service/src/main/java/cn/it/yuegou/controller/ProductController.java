@@ -7,6 +7,7 @@ import cn.it.yuegou.query.ProductQuery;
 import cn.it.yuegou.util.AjaxResult;
 import cn.it.yuegou.util.PageList;
 import cn.it.yuegou.util.StrUtils;
+import cn.it.yuegou.vo.SkusVo;
 import com.alibaba.fastjson.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -126,5 +127,22 @@ public class ProductController {
     @GetMapping("/getSkuProperties/{productId}")
     public List<Specification> getSkuProperties(@PathVariable("productId") Long productId){
         return productService.getSkuProperties(productId);
+    }
+
+    /**
+     * 保存sku属性
+     * @param productId
+     * @param skusVo
+     * @return
+     */
+    @PostMapping("/saveSkuProperties")
+    public AjaxResult saveSkuProperties(@RequestParam("productId") Long productId, @RequestBody SkusVo skusVo){
+        try {
+            productService.saveSkuProperties(productId,skusVo.getSkuProperties(),skusVo.getSkus());
+            return AjaxResult.me().setMessage("保存成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("保存失败："+e.getMessage());
+        }
     }
 }
