@@ -5,13 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0b41bc-be2d-4541-9fb9-719231026be1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/vo/SkusVo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/SkuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/SkuMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SkuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISkuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SkuServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -253,17 +250,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7ff71f95" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e64de7e8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7ff71f95" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b88809df" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@7ff71f95" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1f3469f9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e64de7e8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ea3ab3e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -316,7 +308,9 @@
       <workItem from="1571535920403" duration="659000" />
       <workItem from="1571538308298" duration="652000" />
       <workItem from="1571541994016" duration="256000" />
-      <workItem from="1571542283354" duration="12116000" />
+      <workItem from="1571542283354" duration="12336000" />
+      <workItem from="1571566270091" duration="861000" />
+      <workItem from="1571576217586" duration="3042000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1570606901094</created>
@@ -395,7 +389,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571535065298</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="sku属性完善维护">
+      <created>1571562282618</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1571562282618</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -424,6 +425,7 @@
     <MESSAGE value="fdfs文件上传" />
     <MESSAGE value="解决缓存击穿问题" />
     <MESSAGE value="商品管理维护" />
-    <option name="LAST_COMMIT_MESSAGE" value="商品管理维护" />
+    <MESSAGE value="sku属性完善维护" />
+    <option name="LAST_COMMIT_MESSAGE" value="sku属性完善维护" />
   </component>
 </project>

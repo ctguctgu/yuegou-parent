@@ -3,6 +3,8 @@ package cn.it.yuegou.service;
 import cn.it.yuegou.domain.Sku;
 import com.baomidou.mybatisplus.extension.service.IService;
 
+import java.util.List;
+
 /**
  * <p>
  * SKU 服务类
@@ -13,4 +15,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ISkuService extends IService<Sku> {
 
+    /**
+     * 获取价格、库存
+     * @param productId
+     * @return
+     */
+    List<Sku> getPrices(Long productId);
 }
