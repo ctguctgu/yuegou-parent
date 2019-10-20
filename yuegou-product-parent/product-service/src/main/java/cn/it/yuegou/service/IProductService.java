@@ -1,9 +1,12 @@
 package cn.it.yuegou.service;
 
 import cn.it.yuegou.domain.Product;
+import cn.it.yuegou.domain.Specification;
 import cn.it.yuegou.query.ProductQuery;
 import cn.it.yuegou.util.PageList;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * <p>
@@ -21,4 +24,25 @@ public interface IProductService extends IService<Product> {
      * @return
      */
     PageList<Product> queryPage(ProductQuery query);
+
+    /**
+     * 获取显示属性
+     * @param productId
+     * @return
+     */
+    List<Specification> getViewProperties(Long productId);
+
+    /**
+     * 保存显示属性
+     * @param productId
+     * @param specifications
+     */
+    void saveViewProperties(Long productId, List<Specification> specifications);
+
+    /**
+     * 获取sku属性
+     * @param productId
+     * @return
+     */
+    List<Specification> getSkuProperties(Long productId);
 }

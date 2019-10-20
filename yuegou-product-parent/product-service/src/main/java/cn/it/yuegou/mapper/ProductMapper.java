@@ -24,4 +24,5 @@ public interface ProductMapper extends BaseMapper<Product> {
      * @return
      */
     IPage<Product> queryPage(Page page, @Param("query") ProductQuery query);
+
 }

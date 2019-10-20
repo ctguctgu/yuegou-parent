@@ -1,15 +1,18 @@
 package cn.it.yuegou.controller;
 
+import cn.it.yuegou.domain.Specification;
 import cn.it.yuegou.service.IProductService;
 import cn.it.yuegou.domain.Product;
 import cn.it.yuegou.query.ProductQuery;
 import cn.it.yuegou.util.AjaxResult;
 import cn.it.yuegou.util.PageList;
 import cn.it.yuegou.util.StrUtils;
+import com.alibaba.fastjson.JSONArray;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/product")
@@ -72,7 +75,6 @@ public class ProductController {
         return productService.getById(id);
     }
 
-
     /**
     * 查看所有
     * @return
@@ -83,7 +85,6 @@ public class ProductController {
         return productService.list(null);
     }
 
-
     /**
     * 分页查询数据
     *
@@ -91,8 +92,34 @@ public class ProductController {
     * @return PageList 分页对象
     */
     @RequestMapping(value = "/json",method = RequestMethod.POST)
-    public PageList<Product> json(@RequestBody ProductQuery query)
-    {
+    public PageList<Product> json(@RequestBody ProductQuery query) {
         return productService.queryPage(query);
+    }
+
+    /**'
+     * 根据商品ID查询显示属性
+     * @return
+     */
+    @GetMapping("/getViewProperties/{productId}")
+    public List<Specification> getViewProperties(@PathVariable("productId") Long productId){
+        return productService.getViewProperties(productId);
+    }
+
+    @PostMapping("/saveViewProperties")
+    public AjaxResult saveViewProperties(@RequestBody Map<String,Object> param){
+        Integer integer = (Integer) param.get("productId");
+        Long productId = Long.parseLong(integer.toString());
+        List<Specification> specifications = (List<Specification>) param.get("viewProperties");
+        productService.saveViewProperties(productId,specifications);
+        return AjaxResult.me();
+    }
+
+    /**'
+     * c
+     * @return
+     */
+    @GetMapping("/getSkuProperties/{productId}")
+    public List<Specification> getSkuProperties(@PathVariable("productId") Long productId){
+        return productService.getSkuProperties(productId);
     }
 }
