@@ -96,7 +96,7 @@ public class ProductController {
         return productService.queryPage(query);
     }
 
-    /**'
+    /**
      * 根据商品ID查询显示属性
      * @return
      */
@@ -105,6 +105,11 @@ public class ProductController {
         return productService.getViewProperties(productId);
     }
 
+    /**
+     * 保存显示属性
+     * @param param
+     * @return
+     */
     @PostMapping("/saveViewProperties")
     public AjaxResult saveViewProperties(@RequestBody Map<String,Object> param){
         Integer integer = (Integer) param.get("productId");
@@ -114,8 +119,8 @@ public class ProductController {
         return AjaxResult.me();
     }
 
-    /**'
-     * c
+    /**
+     * 根据商品ID查询SKU属性
      * @return
      */
     @GetMapping("/getSkuProperties/{productId}")
