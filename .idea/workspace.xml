@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac0b41bc-be2d-4541-9fb9-719231026be1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-interface/src/main/java/cn/it/yuegou/domain/Specification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/SpecificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/SpecificationMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +59,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="3f00a7e5034988b641958c5d07c4546412dc2de1" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
@@ -358,7 +356,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571317111961</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="商品管理维护">
+      <created>1571533138680</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1571533138680</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
