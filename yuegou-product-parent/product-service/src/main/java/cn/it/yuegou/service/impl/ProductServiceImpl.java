@@ -1,13 +1,8 @@
 package cn.it.yuegou.service.impl;
 
-import cn.it.yuegou.domain.Product;
-import cn.it.yuegou.domain.ProductExt;
-import cn.it.yuegou.domain.Sku;
-import cn.it.yuegou.domain.Specification;
-import cn.it.yuegou.mapper.ProductExtMapper;
-import cn.it.yuegou.mapper.ProductMapper;
-import cn.it.yuegou.mapper.SkuMapper;
-import cn.it.yuegou.mapper.SpecificationMapper;
+import cn.it.yuegou.client.EsProductClient;
+import cn.it.yuegou.domain.*;
+import cn.it.yuegou.mapper.*;
 import cn.it.yuegou.query.ProductQuery;
 import cn.it.yuegou.service.IProductService;
 import cn.it.yuegou.util.PageList;
@@ -16,11 +11,13 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import feign.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -41,6 +38,12 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private SpecificationMapper specificationMapper;
     @Autowired
     private SkuMapper skuMapper;
+    @Autowired
+    private EsProductClient esProductClient;
+    @Autowired
+    private ProductTypeMapper productTypeMapper;
+    @Autowired
+    private BrandMapper brandMapper;
 
     @Override
     @Transactional
@@ -132,5 +135,81 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
             sku.setIndexs(skuMap.get("indexs"));
             skuMapper.insert(sku);
         }
+    }
+
+    /**
+     * 批量上架
+     * @param ids
+     */
+    @Override
+    public void onSale(List<Long> ids) {
+        baseMapper.onSale(ids,System.currentTimeMillis());
+        List<Product> products = baseMapper.selectBatchIds(ids);
+        List<ProductDoc> productDocList = products2Docs(products);
+        esProductClient.saveBatch(productDocList);
+    }
+
+    private List<ProductDoc> products2Docs(List<Product> products) {
+        List<ProductDoc> productDocs = new ArrayList<>();
+        for (Product product : products) {
+            ProductDoc productDoc = product2Doc(product);
+            productDocs.add(productDoc);
+        }
+        return productDocs;
+    }
+
+    private ProductDoc product2Doc(Product product) {
+        ProductDoc productDoc = new ProductDoc();
+        ProductType productType = productTypeMapper.selectById(product.getProductTypeId());
+        Brand brand = brandMapper.selectById(product.getBrandId());
+
+        productDoc.setId(product.getId());
+        StringBuilder all = new StringBuilder();
+        all.append(product.getName())
+                .append(" ")
+                .append(product.getSubName())
+                .append(" ")
+                .append(productType.getName())
+                .append(" ")
+                .append(brand.getName());
+        productDoc.setAll(all.toString());
+        productDoc.setProductTypeId(product.getProductTypeId());
+        productDoc.setBrandId(product.getBrandId());
+        List<Sku> skus = skuMapper.selectList(new QueryWrapper<Sku>().eq("product_id", product.getId()));
+        Integer maxPrice=0;
+        Integer minPrice=0;
+        if (skus!=null&&skus.size()>0){
+            minPrice = skus.get(0).getPrice();
+        }
+        for (Sku sku : skus) {
+            if (sku.getPrice()>maxPrice){
+                maxPrice=sku.getPrice();
+            }
+            if (sku.getPrice()<minPrice){
+                minPrice=sku.getPrice();
+            }
+        }
+        productDoc.setMaxPrice(maxPrice);
+        productDoc.setMinPrice(minPrice);
+        productDoc.setSaleCount(product.getSaleCount());
+        productDoc.setOnSaleTime(product.getOnSaleTime());
+        productDoc.setCommentCount(product.getCommentCount());
+        productDoc.setViewCount(product.getViewCount());
+        productDoc.setName(product.getName());
+        productDoc.setSubName(product.getSubName());
+        productDoc.setMedias(product.getMedias());
+        productDoc.setViewProperties(product.getViewProperties());
+        productDoc.setSkuProperties(product.getSkuProperties());
+        return productDoc;
+    }
+
+    /**
+     * 批量下架
+     * @param ids
+     */
+    @Override
+    public void offSale(List<Long> ids) {
+        baseMapper.offSale(ids,System.currentTimeMillis());
+        esProductClient.deleteBatch(ids);
     }
 }

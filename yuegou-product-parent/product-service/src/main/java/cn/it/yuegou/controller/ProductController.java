@@ -145,4 +145,34 @@ public class ProductController {
             return AjaxResult.me().setSuccess(false).setMessage("保存失败："+e.getMessage());
         }
     }
+
+    /**
+     * 批量上架
+     */
+    @GetMapping("/onSale")
+    public AjaxResult onSale(@RequestParam("ids")String ids){
+        try {
+            List<Long> longs = StrUtils.splitStr2LongArr(ids);
+            productService.onSale(longs);
+            return AjaxResult.me().setMessage("上架成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("上架失败:"+e.getMessage());
+        }
+    }
+
+    /**
+     * 批量下架
+     */
+    @GetMapping("/offSale")
+    public AjaxResult offSale(@RequestParam("ids")String ids){
+        try {
+            List<Long> longs = StrUtils.splitStr2LongArr(ids);
+            productService.offSale(longs);
+            return AjaxResult.me().setMessage("下架成功");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return AjaxResult.me().setSuccess(false).setMessage("下架失败:"+e.getMessage());
+        }
+    }
 }

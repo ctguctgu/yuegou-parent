@@ -5,10 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0b41bc-be2d-4541-9fb9-719231026be1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-interface/src/main/java/cn/it/yuegou/client/EsProductClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-interface/src/main/java/cn/it/yuegou/domain/ProductDoc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/main/java/cn/it/yuegou/controller/EsProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/main/java/cn/it/yuegou/repository/ProductDocRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/src/test/java/cn/it/yuegou/ESTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SkuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISkuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SkuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-common-parent/common-interface/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-common-parent/common-interface/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-common-parent/common-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-common-parent/common-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductTypeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/mapper/ProductTypeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/ProductMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/cn/it/yuegou/mapper/ProductMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/home.vm" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/home.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/home/common-header.vm" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/home/common-header.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/product.type.vm" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/product.type.vm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/product.type.vm.html" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/product.type.vm.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -104,23 +118,23 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.46029413" />
-    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-product-parent\product-service\src\main\resources" />
-      <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-common-parent\common-service\src\main\resources\template\home" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cn.it.yuegou.config" />
-      <recent name="cn.it.yuegou" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-common-parent\common-service\src\main\java\cn\it\yuegou\util" />
       <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-common-parent\common-service\src\main\resources" />
       <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-basic\basic-util\src\main\java\cn\it\yuegou\util" />
       <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-product-parent\product-service\src\main\resources" />
       <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-zuul\src\main\resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="cn.it.yuegou.config" />
+      <recent name="cn.it.yuegou" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-product-parent\product-service\src\main\resources" />
+      <recent name="D:\software\IdeaProjects\yuegou-parent\yuegou-common-parent\common-service\src\main\resources\template\home" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -140,16 +154,19 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProductApp">
-    <configuration name="GenerateTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="cn.it.aigou.GenerateTest" />
-      <module name="basic-generator" />
+  <component name="RunManager" selected="JUnit.ESTest.test">
+    <configuration name="ESTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="common-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="cn.it.aigou.*" />
+          <option name="PATTERN" value="cn.it.yuegou.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="cn.it.yuegou" />
+      <option name="MAIN_CLASS_NAME" value="cn.it.yuegou.ESTest" />
+      <option name="METHOD_NAME" value="test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -224,21 +241,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.GenerateTest" />
       <item itemvalue="Spring Boot.CommonApp" />
       <item itemvalue="Spring Boot.ProductApp" />
       <item itemvalue="Spring Boot.ConfigServerApp" />
       <item itemvalue="Spring Boot.EurekaApp" />
       <item itemvalue="Spring Boot.PlatApp" />
       <item itemvalue="Spring Boot.ZuulApp" />
+      <item itemvalue="JUnit.ESTest.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ESTest.test" />
         <item itemvalue="Spring Boot.PlatApp" />
         <item itemvalue="Spring Boot.ZuulApp" />
         <item itemvalue="Spring Boot.ConfigServerApp" />
         <item itemvalue="Spring Boot.EurekaApp" />
-        <item itemvalue="Application.GenerateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -250,12 +267,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e64de7e8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b445916e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@e64de7e8" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@ea3ab3e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@b445916e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@5426908b" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
           </expand>
           <select />
@@ -310,7 +327,10 @@
       <workItem from="1571541994016" duration="256000" />
       <workItem from="1571542283354" duration="12336000" />
       <workItem from="1571566270091" duration="861000" />
-      <workItem from="1571576217586" duration="3042000" />
+      <workItem from="1571576217586" duration="3279000" />
+      <workItem from="1571624880690" duration="1837000" />
+      <workItem from="1571628864853" duration="4535000" />
+      <workItem from="1571636763497" duration="10097000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1570606901094</created>
@@ -396,7 +416,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571562282618</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="sku属性修改回填">
+      <created>1571580510444</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1571580510444</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -426,6 +453,7 @@
     <MESSAGE value="解决缓存击穿问题" />
     <MESSAGE value="商品管理维护" />
     <MESSAGE value="sku属性完善维护" />
-    <option name="LAST_COMMIT_MESSAGE" value="sku属性完善维护" />
+    <MESSAGE value="sku属性修改回填" />
+    <option name="LAST_COMMIT_MESSAGE" value="sku属性修改回填" />
   </component>
 </project>

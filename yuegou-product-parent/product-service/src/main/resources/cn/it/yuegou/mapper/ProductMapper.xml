@@ -36,6 +36,20 @@
             <result column="brandname" property="name"/>
         </association>
     </resultMap>
+    <update id="onSale">
+        update t_product
+        set state=1 ,onSaleTime=#{time} where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </update>
+    <update id="offSale">
+        update t_product
+        set state=0 ,offSaleTime=#{time} where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </update>
     <select id="queryPage" resultMap="BaseResultMap">
         select p.*,pt.name typename,b.name brandname
         from t_product p
