@@ -1,23 +1,27 @@
 package cn.it.yuegou.service.impl;
 
 import cn.it.yuegou.client.EsProductClient;
+import cn.it.yuegou.client.StaticPageClient;
 import cn.it.yuegou.domain.*;
 import cn.it.yuegou.mapper.*;
 import cn.it.yuegou.query.ProductQuery;
 import cn.it.yuegou.service.IProductService;
+import cn.it.yuegou.service.IProductTypeService;
 import cn.it.yuegou.util.PageList;
+import cn.it.yuegou.vo.ProductTypeCrumbVo;
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import feign.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -44,6 +48,10 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
     private ProductTypeMapper productTypeMapper;
     @Autowired
     private BrandMapper brandMapper;
+    @Autowired
+    private IProductTypeService typeService;
+    @Autowired
+    private StaticPageClient pageClient;
 
     @Override
     @Transactional
@@ -146,7 +154,46 @@ public class ProductServiceImpl extends ServiceImpl<ProductMapper, Product> impl
         baseMapper.onSale(ids,System.currentTimeMillis());
         List<Product> products = baseMapper.selectBatchIds(ids);
         List<ProductDoc> productDocList = products2Docs(products);
+        staticDetailPage(products);
         esProductClient.saveBatch(productDocList);
+    }
+
+    /**
+     * 商品详情页-页面静态化
+     * @param products
+     */
+    private void staticDetailPage(List<Product> products) {
+        for (Product product : products) {
+            String templatePath = "D:\\software\\IdeaProjects\\yuegou-parent\\yuegou-product-parent\\product-service\\src\\main\\resources\\template\\product.detail.vm";
+            String targetPath = "D:\\software\\IdeaProjects\\yuegou-web-parent\\ecommerce\\detail\\"+product.getId()+".html";
+            Map<String,Object> model = new HashMap<>();
+            List<ProductTypeCrumbVo> crumbs = typeService.loadTypeCrumb(product.getProductTypeId());
+            model.put("crumbs",crumbs);
+            model.put("product",product);
+            String skuProperties = product.getSkuProperties();
+            List<Specification> skus = JSONArray.parseArray(skuProperties, Specification.class);
+            model.put("skus",skus);
+            String viewProperties = product.getViewProperties();
+            List<Specification> views = JSONArray.parseArray(viewProperties, Specification.class);
+            model.put("views",views);
+            ProductExt productExt = productExtMapper.selectOne(new QueryWrapper<ProductExt>().eq("product_id", product.getId()));
+            String richContent = productExt.getRichContent();
+            model.put("richContent",richContent);
+            String mediasStr = product.getMedias();
+            String[] mediasArr = mediasStr.split(",");
+            List<List<String>> images = new ArrayList<>();
+            for (String media : mediasArr) {
+                List<String> oneMedia = new ArrayList<>();
+                oneMedia.add("http://172.16.4.153"+media);
+                oneMedia.add("http://172.16.4.153"+media);
+                oneMedia.add("http://172.16.4.153"+media);
+                images.add(oneMedia);
+            }
+            String medias = JSON.toJSONString(images);
+            model.put("medias",medias);
+            model.put("skuJSON", product.getSkuProperties());
+            pageClient.generatePage(templatePath,targetPath,model);
+        }
     }
 
     private List<ProductDoc> products2Docs(List<Product> products) {

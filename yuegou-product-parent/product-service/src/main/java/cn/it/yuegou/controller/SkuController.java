@@ -7,6 +7,7 @@ import cn.it.yuegou.util.AjaxResult;
 import cn.it.yuegou.util.PageList;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -93,5 +94,13 @@ public class SkuController {
     @GetMapping("/getPrices/{productId}")
     public List<Sku> getPrices(@PathVariable("productId")Long productId){
         return skuService.getPrices(productId);
+    }
+
+    /**
+     * 商品详情页展示sku属性的价格和库存
+     */
+    @GetMapping("/skuChange")
+    public Sku skuChange(@Param("productId")Long productId,@Param("indexs")String indexs){
+        return skuService.skuChange(productId,indexs);
     }
 }

@@ -28,4 +28,15 @@ public class SkuServiceImpl extends ServiceImpl<SkuMapper, Sku> implements ISkuS
     public List<Sku> getPrices(Long productId) {
         return baseMapper.selectList(new QueryWrapper<Sku>().eq("product_id", productId));
     }
+
+    /**
+     * 商品详情页展示sku属性的价格和库存
+     * @param productId
+     * @param indexs
+     * @return
+     */
+    @Override
+    public Sku skuChange(Long productId, String indexs) {
+        return baseMapper.selectOne(new QueryWrapper<Sku>().eq("product_id", productId).eq("indexs", indexs));
+    }
 }

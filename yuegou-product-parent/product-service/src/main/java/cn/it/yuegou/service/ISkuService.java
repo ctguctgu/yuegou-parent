@@ -21,4 +21,12 @@ public interface ISkuService extends IService<Sku> {
      * @return
      */
     List<Sku> getPrices(Long productId);
+
+    /**
+     * 商品详情页展示sku属性的价格和库存
+     * @param productId
+     * @param indexs
+     * @return
+     */
+    Sku skuChange(Long productId, String indexs);
 }
