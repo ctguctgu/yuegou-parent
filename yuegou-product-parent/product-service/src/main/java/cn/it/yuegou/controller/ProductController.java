@@ -1,5 +1,7 @@
 package cn.it.yuegou.controller;
 
+import cn.it.yuegou.domain.ProductDoc;
+import cn.it.yuegou.domain.ProductParam;
 import cn.it.yuegou.domain.Specification;
 import cn.it.yuegou.service.IProductService;
 import cn.it.yuegou.domain.Product;
@@ -174,5 +176,10 @@ public class ProductController {
             e.printStackTrace();
             return AjaxResult.me().setSuccess(false).setMessage("下架失败:"+e.getMessage());
         }
+    }
+
+    @PostMapping("/queryOnSale")
+    public PageList<Product> queryOnSale(@RequestBody ProductParam param){
+        return productService.queryOnSale(param);
     }
 }

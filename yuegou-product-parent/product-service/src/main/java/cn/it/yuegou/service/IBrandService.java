@@ -3,6 +3,7 @@ package cn.it.yuegou.service;
 import cn.it.yuegou.domain.Brand;
 import cn.it.yuegou.query.BrandQuery;
 import cn.it.yuegou.util.PageList;
+import cn.it.yuegou.vo.BrandVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -21,4 +22,11 @@ public interface IBrandService extends IService<Brand> {
      * @return
      */
     PageList<Brand> queryPage(BrandQuery query);
+
+    /**
+     * 根据类型加载品牌信息
+     * @param productTypeId
+     * @return
+     */
+    BrandVo getBrandVo(Long productTypeId);
 }

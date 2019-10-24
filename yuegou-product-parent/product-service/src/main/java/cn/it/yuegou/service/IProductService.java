@@ -1,6 +1,8 @@
 package cn.it.yuegou.service;
 
 import cn.it.yuegou.domain.Product;
+import cn.it.yuegou.domain.ProductDoc;
+import cn.it.yuegou.domain.ProductParam;
 import cn.it.yuegou.domain.Specification;
 import cn.it.yuegou.query.ProductQuery;
 import cn.it.yuegou.util.PageList;
@@ -65,4 +67,11 @@ public interface IProductService extends IService<Product> {
      * @param longs
      */
     void offSale(List<Long> longs);
+
+    /**
+     * 商城搜索上架商品
+     * @param param
+     * @return
+     */
+    PageList<Product> queryOnSale(ProductParam param);
 }

@@ -5,8 +5,10 @@ import cn.it.yuegou.client.StaticPageClient;
 import cn.it.yuegou.domain.ProductType;
 import cn.it.yuegou.mapper.ProductTypeMapper;
 import cn.it.yuegou.service.IProductTypeService;
+import cn.it.yuegou.vo.ProductTypeCrumbVo;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.injector.methods.UpdateById;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.mysql.cj.xdevapi.JsonArray;
@@ -131,5 +133,31 @@ public class ProductTypeServiceImpl extends ServiceImpl<ProductTypeMapper, Produ
             }
         }
         return firstLevelTypes;
+    }
+
+    @Override
+    public List<ProductTypeCrumbVo> loadTypeCrumb(Long productTypeId) {
+        ProductType currentType = baseMapper.selectById(productTypeId);
+        String path = currentType.getPath();
+        List<Long> ids = pathSplit(path);
+        List<ProductType> productTypes = baseMapper.selectBatchIds(ids);
+        List<ProductTypeCrumbVo> result = new ArrayList<>();
+        ProductTypeCrumbVo vo = null;
+        for (ProductType productType : productTypes) {
+            vo = new ProductTypeCrumbVo();
+            vo.setCurrentType(productType);
+            vo.setOtherTypes(baseMapper.selectList(new QueryWrapper<ProductType>().eq("pid", productType.getPid())));
+            result.add(vo);
+        }
+        return result;
+    }
+
+    private List<Long> pathSplit(String path) {
+        String[] idArr = path.substring(1).split("\\.");
+        List<Long> idList = new ArrayList<>();
+        for (String id : idArr) {
+            idList.add(Long.parseLong(id));
+        }
+        return idList;
     }
 }

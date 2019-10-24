@@ -1,6 +1,7 @@
 package cn.it.yuegou.service;
 
 import cn.it.yuegou.domain.ProductType;
+import cn.it.yuegou.vo.ProductTypeCrumbVo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -25,4 +26,11 @@ public interface IProductTypeService extends IService<ProductType> {
      * 生成静态页面方法
      */
     void homePage();
+
+    /**
+     * 加载类型面包屑
+     * @param productTypeId
+     * @return
+     */
+    List<ProductTypeCrumbVo> loadTypeCrumb(Long productTypeId);
 }

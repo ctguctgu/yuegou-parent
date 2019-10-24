@@ -7,6 +7,7 @@ import cn.it.yuegou.util.AjaxResult;
 import cn.it.yuegou.util.LetterUtil;
 import cn.it.yuegou.util.PageList;
 import cn.it.yuegou.util.StrUtils;
+import cn.it.yuegou.vo.BrandVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -102,6 +103,17 @@ public class BrandController {
     */
     @RequestMapping(value = "/json",method = RequestMethod.POST)
     public PageList<Brand> json(@RequestBody BrandQuery query) {
+
         return brandService.queryPage(query);
+    }
+
+    /**
+     * 根据类型加载品牌信息
+     * @param productTypeId
+     * @return
+     */
+    @GetMapping("/getBrandVo")
+    public BrandVo getBrandVo(@RequestParam("productTypeId") Long productTypeId){
+        return brandService.getBrandVo(productTypeId);
     }
 }

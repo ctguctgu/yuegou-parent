@@ -2,6 +2,8 @@ package cn.it.yuegou.client;
 
 
 import cn.it.yuegou.domain.ProductDoc;
+import cn.it.yuegou.domain.ProductParam;
+import cn.it.yuegou.util.PageList;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -17,4 +19,6 @@ public interface EsProductClient {
     public void saveBatch(@RequestBody List<ProductDoc> productDocs);
     @PostMapping("/es/deleteBatch")
     public void deleteBatch(@RequestBody List<Long> ids);
+    @PostMapping("/es/products")
+    public PageList<ProductDoc> search(@RequestBody ProductParam param);
 }
