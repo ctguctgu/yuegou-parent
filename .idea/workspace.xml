@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac0b41bc-be2d-4541-9fb9-719231026be1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template/product.detail.vm" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SkuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/controller/SkuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISkuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/ISkuService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SkuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/service/impl/SkuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/ProductApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/java/cn/it/yuegou/ProductApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yuegou-zuul/yuegou-zuul.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/yuegou-parent.iml" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,9 +53,6 @@
     </expand>
     <select />
   </component>
-  <component name="FavoritesManager">
-    <favorites_list name="yuegou-parent" />
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -85,15 +79,18 @@
         <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.3.9" />
       </MavenGeneralSettings>
     </option>
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
   </component>
   <component name="ProjectId" id="1RulnET3v5cDJXzARBlihTglAb0" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="abbreviatePackageNames" value="true" />
+    <option name="flattenPackages" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
@@ -107,10 +104,13 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/yuegou-product-parent/product-service/src/main/resources/template" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.46029413" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RebelAgentSelection">
+    <selection>jr</selection>
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -135,18 +135,8 @@
         <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
-  <component name="RunManager" selected="JUnit.ESTest.test">
+  <component name="RunManager" selected="Spring Boot.ProductApp">
     <configuration name="ESTest.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="common-service" />
       <extension name="coverage">
@@ -251,27 +241,6 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ServiceViewManager">
-    <option name="allServicesViewState">
-      <serviceView>
-        <option name="contentProportion" value="0.18754373" />
-        <treeState>
-          <expand>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d53c536c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@d53c536c" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@c9c08a9e" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-            </path>
-          </expand>
-          <select />
-        </treeState>
-      </serviceView>
-    </option>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -326,7 +295,21 @@
       <workItem from="1571827437597" duration="127000" />
       <workItem from="1571827898177" duration="4141000" />
       <workItem from="1571893186556" duration="8916000" />
-      <workItem from="1571911698110" duration="3930000" />
+      <workItem from="1571911698110" duration="3967000" />
+      <workItem from="1572253017356" duration="5571000" />
+      <workItem from="1572267763076" duration="1749000" />
+      <workItem from="1572572781647" duration="227000" />
+      <workItem from="1572595224712" duration="5000" />
+      <workItem from="1572656227819" duration="2746000" />
+      <workItem from="1572864487182" duration="335000" />
+      <workItem from="1572938281963" duration="2434000" />
+      <workItem from="1580474958669" duration="646000" />
+      <workItem from="1581478532964" duration="6000" />
+      <workItem from="1588992089399" duration="34000" />
+      <workItem from="1588992193171" duration="39000" />
+      <workItem from="1588992253175" duration="41000" />
+      <workItem from="1588992330869" duration="393000" />
+      <workItem from="1588992747316" duration="1586000" />
     </task>
     <task id="LOCAL-00001" summary="测试提交">
       <created>1570606901094</created>
@@ -426,24 +409,30 @@
       <option name="project" value="LOCAL" />
       <updated>1571893325247</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="商品详情页面完善">
+      <created>1571916182277</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1571916182277</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -458,6 +447,53 @@
     <MESSAGE value="sku属性完善维护" />
     <MESSAGE value="sku属性修改回填" />
     <MESSAGE value="列表页面完善" />
-    <option name="LAST_COMMIT_MESSAGE" value="列表页面完善" />
+    <MESSAGE value="商品详情页面完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="商品详情页面完善" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="618" y="342" key="#Notifications" timestamp="1588992345083">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="618" y="342" key="#Notifications/0.0.1500.960@0.0.1500.960" timestamp="1588992345083" />
+    <state x="284" y="74" key="#ProductApp" timestamp="1588993103998">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="284" y="74" key="#ProductApp/0.0.1500.960@0.0.1500.960" timestamp="1588993103998" />
+    <state width="1000" height="214" key="GridCell.Tab.0.bottom" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state width="1000" height="214" key="GridCell.Tab.0.center" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state width="1000" height="214" key="GridCell.Tab.0.left" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state width="1000" height="214" key="GridCell.Tab.0.right" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state width="1000" height="214" key="GridCell.Tab.1.bottom" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.1.bottom/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state width="1000" height="214" key="GridCell.Tab.1.center" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.1.center/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state width="1000" height="214" key="GridCell.Tab.1.left" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.1.left/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state width="1000" height="214" key="GridCell.Tab.1.right" timestamp="1588993998481">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="1000" height="214" key="GridCell.Tab.1.right/0.0.1500.960@0.0.1500.960" timestamp="1588993998481" />
+    <state x="231" y="54" key="SettingsEditor" timestamp="1588992997341">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="231" y="54" key="SettingsEditor/0.0.1500.960@0.0.1500.960" timestamp="1588992997341" />
   </component>
 </project>
